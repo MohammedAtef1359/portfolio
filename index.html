@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohamed Atef - Frontend & WordPress Developer</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Main Content - No Loading Screen -->
+    <div class="main-content loaded" id="mainContent">
+      <!-- Snake Cursor Animation -->
+      <div class="snake-cursor" id="snakeCursor"></div>
+
+      <!-- 3D Background Canvas - Only for Hero Section -->
+      <canvas id="bg-canvas"></canvas>
+
+      <!-- Language Toggle Button -->
+      <div class="lang-toggle" id="langToggle">
+        <i class="fas fa-globe"></i>
+        <span class="lang-text">العربية</span>
+      </div>
+
+      <!-- Fixed WhatsApp Button -->
+      <div class="whatsapp-btn">
+        <a href="https://wa.me/01126991729" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+          <span class="whatsapp-text">WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Section 1: Hero -->
+      <section id="hero" class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <!-- Mobile First: Profile Image -->
+            <div class="hero-right mobile-first">
+              <div class="profile-container">
+                <img
+                  src="assets/imgs/profile.jpg"
+                  alt="Mohamed Atef"
+                  class="profile-img"
+                />
+                <div class="profile-glow"></div>
+              </div>
+            </div>
+
+            <div class="hero-left">
+              <h1 class="hero-title">
+                <span class="en">Mohamed Atef</span>
+                <span class="ar">محمد عاطف</span>
+              </h1>
+              <h2 class="hero-subtitle">
+                <span class="en">Frontend & WordPress Developer</span>
+                <span class="ar">مطور واجهات أمامية وووردبريس</span>
+              </h2>
+              <p class="hero-description">
+                <span class="en"
+                  >Passionate frontend developer with expertise in creating
+                  stunning, responsive websites and WordPress solutions. I
+                  transform ideas into digital experiences that engage and
+                  inspire users. With a keen eye for design and a deep
+                  understanding of modern web technologies, I bring your vision
+                  to life.</span
+                >
+                <span class="ar"
+                  >مطور واجهات أمامية شغوف متخصص في إنشاء مواقع ويب مذهلة
+                  ومتجاوبة وحلول ووردبريس احترافية. أحول الأفكار إلى تجارب رقمية
+                  تجذب وتلهم المستخدمين. بعين فنية للتصميم وفهم عميق لأحدث
+                  تقنيات الويب، أحقق رؤيتك الرقمية.</span
+                >
+              </p>
+              <div class="social-links">
+                <a
+                  href="https://www.linkedin.com/in/mohammed-atef-2b82a3222"
+                  target="_blank"
+                  class="social-link"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/mohamed.atef.951890"
+                  target="_blank"
+                  class="social-link"
+                >
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a
+                  href="https://x.com/Mohamme96765114?"
+                  target="_blank"
+                  class="social-link"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/mohammed_atef59?igsh=YTQ0N2ZmdzZzc3Rl"
+                  target="_blank"
+                  class="social-link"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Desktop: Profile Image -->
+            <div class="hero-right desktop-only">
+              <div class="profile-container">
+                <img
+                  src="assets/imgs/profile.jpg"
+                  alt="Mohamed Atef"
+                  class="profile-img"
+                />
+                <div class="profile-glow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Counter -->
+      <section id="stats" class="stats-section">
+        <div class="container">
+          <div class="stats-content">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-project-diagram"></i>
+              </div>
+              <div class="stat-info">
+                <div class="stat-number">
+                  <span class="counter" data-target="250">0</span>
+                  <span class="plus-sign">+</span>
+                </div>
+                <div class="stat-label">
+                  <span class="en">Projects Completed</span>
+                  <span class="ar">مشروع مكتمل</span>
+                </div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="stat-info">
+                <div class="stat-number">
+                  <span class="counter" data-target="2">0</span>
+                  <span class="plus-sign">+</span>
+                </div>
+                <div class="stat-label">
+                  <span class="en">Years of Experience</span>
+                  <span class="ar">سنوات من الخبرة</span>
+                </div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="stat-info">
+                <div class="stat-number">
+                  <span class="counter" data-target="100">0</span>
+                  <span class="percent-sign">%</span>
+                </div>
+                <div class="stat-label">
+                  <span class="en">Client Satisfaction</span>
+                  <span class="ar">رضا العملاء</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Platforms - 3 per row on PC, 2 on mobile -->
+      <section id="platforms" class="platforms-section">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="en">Technologies & Platforms</span>
+            <span class="ar">التقنيات والمنصات</span>
+          </h2>
+          <div class="platforms-content">
+            <div class="platform-card">
+              <div class="platform-logo">
+                <img src="assets/imgs/wp.jpg" alt="WordPress" />
+              </div>
+              <h3>WordPress</h3>
+              <p>
+                <span class="en">Custom themes & plugins</span>
+                <span class="ar">قوالب وإضافات مخصصة</span>
+              </p>
+            </div>
+            <div class="platform-card">
+              <div class="platform-logo">
+                <img src="assets/imgs/salla.png" alt="Salla" />
+              </div>
+              <h3>Salla</h3>
+              <p>
+                <span class="en">Leading Saudi e-commerce platform</span>
+                <span class="ar"
+                  >منصة التجارة الإلكترونية السعودية الرائدة</span
+                >
+              </p>
+            </div>
+            <div class="platform-card">
+              <div class="platform-logo">
+                <img src="assets/imgs/zid.webp" alt="Zid" />
+              </div>
+              <h3>Zid</h3>
+              <p>
+                <span class="en">Advanced online store builder</span>
+                <span class="ar">منشئ المتاجر الإلكترونية المتقدم</span>
+              </p>
+            </div>
+            <div class="platform-card">
+              <div class="platform-logo">
+                <img src="assets/imgs/gs.jpg" alt="Google Sites" />
+              </div>
+              <h3>Google Sites</h3>
+              <p>
+                <span class="en">Professional website creation</span>
+                <span class="ar">إنشاء مواقع احترافية</span>
+              </p>
+            </div>
+            <div class="platform-card">
+              <div class="platform-logo">
+                <img src="assets/imgs/Woo.png" alt="WooCommerce" />
+              </div>
+              <h3>WooCommerce</h3>
+              <p>
+                <span class="en">WordPress e-commerce specialist</span>
+                <span class="ar">متخصص التجارة الإلكترونية لووردبريس</span>
+              </p>
+            </div>
+            <div class="platform-card">
+              <div class="platform-logo">
+                <img src="assets/imgs/op.jpg" alt="OpenCart" />
+              </div>
+              <h3>OpenCart</h3>
+              <p>
+                <span class="en">Open source e-commerce expert</span>
+                <span class="ar">خبير التجارة الإلكترونية مفتوحة المصدر</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Portfolio Gallery with New Tabs -->
+      <section id="gallery" class="gallery-section">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="en">Project Gallery</span>
+            <span class="ar">معرض المشاريع</span>
+          </h2>
+
+          <!-- Updated Portfolio Tabs -->
+          <div class="portfolio-tabs">
+            <button class="tab-button active" data-tab="wordpress">
+              <i class="fab fa-wordpress"></i>
+              <span class="en">WordPress</span>
+              <span class="ar">ووردبريس</span>
+            </button>
+            <button class="tab-button" data-tab="salla">
+              <i class="fas fa-shopping-bag"></i>
+              <span class="en">Salla</span>
+              <span class="ar">سلة</span>
+            </button>
+            <button class="tab-button" data-tab="zid">
+              <i class="fas fa-store"></i>
+              <span class="en">Zid</span>
+              <span class="ar">زد</span>
+            </button>
+            <button class="tab-button" data-tab="opencart">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="en">OpenCart</span>
+              <span class="ar">أوبن كارت</span>
+            </button>
+          </div>
+
+          <!-- Portfolio Content -->
+          <div class="portfolio-content">
+            <!-- salla Tab Content -->
+            <div class="tab-content active" id="wordpress">
+                 <div class="gallery-slider-wrapper">
+                <div class="swiper sallaSwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/acc1df9b-3329-4c80-8c04-249f3c36f708.png"
+                            alt="Salla Fashion Store"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/adc4599c-c9ee-4c31-a15c-10653ec7402c.png"
+                            alt="Salla Electronics"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/Screenshot 2025-07-26 212858.png"
+                            alt="Salla Beauty Store"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/Screenshot 2025-07-26 213143.png"
+                            alt="Salla Food Store"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/Screenshot 2025-07-26 213236.png"
+                            alt="Salla Jewelry Store"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/Screenshot 2025-07-26 213333.png"
+                            alt="Salla Bookstore"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                   
+                    <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/Screenshot 2025-07-26 213549.png"
+                            alt="Salla Toys Store"
+                          />
+                         
+                        </div>
+                      </div>
+                    </div>
+                      <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/Screenshot 2025-07-26 213456.png"
+                            alt="Salla Toys Store"
+                          />
+                         
+                        </div>
+                      </div>
+                    </div>
+                     
+                  </div>
+                  <div class="swiper-button-next">
+                    <i class="fas fa-chevron-right"></i>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <i class="fas fa-chevron-left"></i>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- wordpress Tab Content -->
+            <div class="tab-content" id="salla">
+           <div class="gallery-slider-wrapper">
+                <div class="swiper wordpressSwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/e48df755-a196-40ae-ae33-d87a771e13a6.png"
+                            alt="WordPress Blog"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/"
+                            alt="WordPress LMS"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/1125a169-198f-439b-b290-e8151da465c2.png"
+                            alt="WordPress News Site"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/14e3b43e-bfe4-4e03-803e-2b4ffd78b612.png"
+                            alt="WordPress Business"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/dea8a22c-b416-40ac-97fe-ab762966cc2f.png"
+                            alt="WordPress E-commerce"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/9e03aeba-dfc7-414a-9607-cc8cd1bd9143.png"
+                            alt="WordPress Portfolio"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/73944fb9-e965-4249-9860-59aa018ddd9d.png"
+                            alt="WordPress Restaurant"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  
+                  </div>
+                  <div class="swiper-button-next">
+                    <i class="fas fa-chevron-right"></i>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <i class="fas fa-chevron-left"></i>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Zid Tab Content -->
+            <div class="tab-content" id="zid">
+              <div class="gallery-slider-wrapper">
+                <div class="swiper zidSwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/Screenshot 2025-07-26 213826.png"
+                            alt="Zid Real Estate"
+                          />
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/Screenshot 2025-07-26 213912.png"
+                            alt="Zid Services"
+                          />
+                       
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/Screenshot 2025-07-26 214022.png"
+                            alt="Zid Tech Store"
+                          />
+                         >
+                        </div>
+                      </div>
+                    </div>
+                
+                  </div>
+                  <div class="swiper-button-next">
+                    <i class="fas fa-chevron-right"></i>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <i class="fas fa-chevron-left"></i>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- OpenCart Tab Content -->
+            <div class="tab-content" id="opencart">
+              <div class="gallery-slider-wrapper">
+                <div class="swiper opencartSwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="gallery-card">
+                        <div class="gallery-image">
+                          <img
+                            src="assets/imgs/Screenshot 2025-07-26 213751.png"
+                            alt="OpenCart Bookstore"
+                          />
+                         
+                        </div>
+                      </div>
+                    </div>
+                
+                   
+                  </div>
+                  <div class="swiper-button-next">
+                    <i class="fas fa-chevron-right"></i>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <i class="fas fa-chevron-left"></i>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Contact -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-content">
+            <!-- Contact Info (Left in English, Right in Arabic) -->
+            <div class="contact-info-side">
+              <h2 class="contact-title">
+                <span class="en">Ready to Launch Your Project?</span>
+                <span class="ar">مستعد لإطلاق مشروعك؟</span>
+              </h2>
+              <p class="contact-description">
+                <span class="en"
+                  >Let's transform your vision into a stunning digital reality!
+                  I'm here to bring your ideas to life with cutting-edge
+                  technology and creative excellence.</span
+                >
+                <span class="ar"
+                  >دعنا نحول رؤيتك إلى واقع رقمي مذهل! أنا هنا لتحويل أفكارك إلى
+                  حقيقة بأحدث التقنيات والإبداع المتميز.</span
+                >
+              </p>
+              <div class="contact-info">
+                <a href="tel:01126991729" class="contact-item">
+                  <i class="fas fa-phone"></i>
+                  <span>01126991729</span>
+                </a>
+                <a
+                  href="mailto:mohammedatef1359@gmail.com"
+                  class="contact-item"
+                >
+                  <i class="fas fa-envelope"></i>
+                  <span>mohammedatef1359@gmail.com</span>
+                </a>
+                <div class="contact-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>
+                    <span class="en">Belgai, Mansoura, Dakahlia, Egypt</span>
+                    <span class="ar">بلجاي، المنصورة، الدقهلية، مصر</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form (Right in English, Left in Arabic) -->
+            <div class="contact-form-side">
+              <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                  <input type="text" id="fullName" name="fullName" required />
+                  <label for="fullName">
+                    <span class="en">Full Name</span>
+                    <span class="ar">الاسم الكامل</span>
+                  </label>
+                </div>
+                <div class="form-group">
+                  <input type="tel" id="phone" name="phone" required />
+                  <label for="phone">
+                    <span class="en">Phone Number</span>
+                    <span class="ar">رقم الهاتف</span>
+                  </label>
+                </div>
+                <div class="form-group">
+                  <input type="email" id="email" name="email" required />
+                  <label for="email">
+                    <span class="en">Email Address</span>
+                    <span class="ar">البريد الإلكتروني</span>
+                  </label>
+                </div>
+                <div class="form-group">
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                  ></textarea>
+                  <label for="message">
+                    <span class="en">Your Message</span>
+                    <span class="ar">رسالتك</span>
+                  </label>
+                </div>
+                <button type="submit" class="submit-btn">
+                  <span class="en">Send Message</span>
+                  <span class="ar">إرسال الرسالة</span>
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <p>
+            <span class="en"
+              >&copy; 2025 Mohamed Atef. All rights reserved.</span
+            >
+            <span class="ar">&copy; 2025 محمد عاطف. جميع الحقوق محفوظة.</span>
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="assets/Script.js"></script>
+  </body>
+</html>
